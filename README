@@ -1,0 +1,63 @@
+24 Dec 2017, RiboWave Version 1.0:
+
+Dear user,
+This is a detailed RiboWave use guide explaining the functions 
+and usage of RiboWave and its workflow. 
+
+###################################################################
+#    This file is part of RiboWave.
+#    RiboWave is powerful Ribo-seq analysis tool that is able to 
+#    denoise the Ribo-seq data and serve for multiple functions.
+#	
+#    RiboWave can be used for multiple purposes: 
+#    		1. denoise the raw Ribo-seq data
+#		2. define translated ORFs
+#		3. estimate the abundance of actively elongating ribosomes
+#		4. estimate translation efficiency(TE)
+#		5. identify potential frameshift candidates
+#    
+#    Author: Zhiyu Xu, Long Hu
+#
+#    Copyright (C) 2017  Zhiyu Xu
+#
+#    RiboWave is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+#    Contact: xanthexu18@gmail.com
+#######################################################################
+
+The RiboWave workflow consists of:
+
+Pre-processing :
+- Create the annotation file for the subsequent analysis. [create_annotation.sh]
+- Determine the P-site position of Ribo-seq. [P-site_determination.sh]
+- Generate P-site tracks from Ribo-seq.[create_track_Ribo.sh]
+
+Main function :
+- Denoise [Ribowave]
+- Predict translated ORFs [Ribowave]
+- Estimate reads density for each given ORF [Ribowave]
+- Estimate translation efficiency [`Ribowave`]
+- Estimate frameshift potential for each given ORF [Ribowave]
+
+In this archive you find all the scripts + the files used to obtain our results
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+0)Requirements
+
+software
+- R
+- bedtools v2.25.0
+
+R packages
+- reshape
+- ggplot2
+- rhdf5
+- methods
+- wmtsa
+- parallel
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+The manual of RiboWave usage can be found in https://lulab.github.io/Ribowave.
